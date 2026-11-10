@@ -1,6 +1,6 @@
 # Mendix Agent — project context and handoff
 
-This document preserves the decisions and verified results from the project conversation. Source code and the local Git connection must be checked separately; this document does not certify that the local folder has been pushed.
+This document preserves the decisions and verified results from the project conversation. It accompanies the source snapshot saved to this repository. The source repository is separate from the Mendix app model on Team Server.
 
 ## Goal
 
@@ -64,11 +64,9 @@ An optional proposed enhancement was to require a nonempty, due StartAt inside S
 
 ## Current unfinished work
 
-1. Connect the existing local folder to this GitHub repository, preserving any existing local Git history and remote content.
-2. Inspect and sanitize the files before committing/pushing.
-3. Add reusable creation of complete microflows, activities/connections, parameters, and pages, including layouts and widgets.
-4. Evaluate existing Mendix tooling before writing every editing operation from scratch.
-5. Add model consistency and meaningful behavioral validation. Local TypeScript/policy checks do not prove a model is valid in Studio Pro or behaves correctly at runtime.
+1. Add reusable creation of complete microflows, activities/connections, parameters, and pages, including layouts and widgets.
+2. Evaluate existing Mendix tooling before writing every editing operation from scratch.
+3. Add model consistency and meaningful behavioral validation. Local TypeScript/policy checks do not prove a model is valid in Studio Pro or behaves correctly at runtime.
 
 ## Research findings
 

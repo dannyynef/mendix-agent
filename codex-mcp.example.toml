@@ -1,0 +1,8 @@
+# Example only: this file does not activate the server automatically.
+# Add this table to your Codex MCP configuration after the smoke test passes.
+# No token belongs in this file; child scripts load the project's local .env.
+[mcp_servers.mendix_agent]
+command = "C:\\Program Files\\nodejs\\node.exe"
+args = ["C:\\Users\\dannynef\\Mendix-Agent\\src\\mcp-server.mjs"]
+startup_timeout_sec = 20
+tool_timeout_sec = 180

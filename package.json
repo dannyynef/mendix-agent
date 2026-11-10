@@ -1,0 +1,29 @@
+{
+    "name":  "mendix-agent",
+    "version":  "0.1.0",
+    "private":  true,
+    "description":  "A learning project for building a Mendix development agent",
+    "scripts":  {
+                    "check":  "tsc --noEmit",
+                    "list":  "tsx --env-file=.env src/list-microflows.ts",
+                    "inspect":  "tsx --env-file=.env src/inspect-microflow.ts",
+                    "mcp":  "node src/mcp-server.mjs",
+                    "test:mcp":  "node scripts/test-mcp.mjs",
+                    "test:documentation":  "node --experimental-strip-types scripts/test-documentation.mjs",
+                    "test:decision":  "node --experimental-strip-types scripts/test-decision.mjs",
+                    "test:model":  "node --experimental-strip-types scripts/test-model-editor.mjs",
+                    "test":  "npm run check \u0026\u0026 npm run test:documentation \u0026\u0026 npm run test:decision \u0026\u0026 npm run test:model \u0026\u0026 npm run test:elements \u0026\u0026 npm run test:mcp",
+                    "test:elements":  "node --experimental-strip-types scripts/test-elements.mjs"
+                },
+    "dependencies":  {
+                         "@modelcontextprotocol/sdk":  "^1.32.2",
+                         "mendixmodelsdk":  "^4.117.0",
+                         "mendixplatformsdk":  "^5.2.0",
+                         "zod":  "^3.25.76"
+                     },
+    "devDependencies":  {
+                            "@types/node":  "^26.6.6",
+                            "tsx":  "^4.23.15",
+                            "typescript":  "^7.0.2"
+                        }
+}
