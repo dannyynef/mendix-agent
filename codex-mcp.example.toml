@@ -3,6 +3,6 @@
 # No token belongs in this file; child scripts load the project's local .env.
 [mcp_servers.mendix_agent]
 command = "C:\\Program Files\\nodejs\\node.exe"
-args = ["C:\\Users\\dannynef\\Mendix-Agent\\src\\mcp-server.mjs"]
+args = ["C:\\path\\to\\mendix-agent\\src\\mcp-server.mjs"]
 startup_timeout_sec = 20
 tool_timeout_sec = 180

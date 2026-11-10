@@ -1,4 +1,6 @@
-# Mendix Agent — project context and handoff
+# Mendix Agent — maintainer history and practice-app handoff
+
+> This file records the original development environment and experiments. For reusable setup and operating instructions, start with README.md, AGENTS.md and docs/SETUP.md. Historical user paths, app names and preferences here do not configure another user's app. The repository's purpose is reusable tooling for terminal/MCP-equipped AI assistants; the practice application is separate.
 
 This document preserves the decisions and verified results from the project conversation. It accompanies the source snapshot saved to this repository. The source repository is separate from the Mendix app model on Team Server.
 

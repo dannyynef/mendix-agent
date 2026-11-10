@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "mendix_agent": {
+      "command": "node",
+      "args": [
+        "/absolute/path/to/mendix-agent/src/mcp-server.mjs"
+      ]
+    }
+  }
+}
