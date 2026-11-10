@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="branch-probe" tests="2" failures="0" errors="0" skipped="0" time="0.015">
+    <testcase name="True branch returns true" classname="evaluation.mxcli.branch-probe" file="evaluation\mxcli\branch-probe.test.mdl" time="0.011">
+      <properties>
+        <property name="assertions" value="1"></property>
+      </properties>
+    </testcase>
+    <testcase name="False branch returns false" classname="evaluation.mxcli.branch-probe" file="evaluation\mxcli\branch-probe.test.mdl" time="0.001">
+      <properties>
+        <property name="assertions" value="1"></property>
+      </properties>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,13 @@
+mdl 1;
+CREATE MICROFLOW MyFirstModule.SUB_MxcliBranchProbe ($ShouldRun: Boolean)
+RETURNS Boolean
+FOLDER 'AgentEvaluation'
+BEGIN
+  IF $ShouldRun THEN
+    LOG INFO NODE 'AgentEvaluation' 'mxcli probe: true branch';
+    RETURN true;
+  ELSE
+    LOG INFO NODE 'AgentEvaluation' 'mxcli probe: false branch';
+    RETURN false;
+  END IF;
+END;

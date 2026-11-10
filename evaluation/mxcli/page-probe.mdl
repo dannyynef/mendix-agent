@@ -1,0 +1,15 @@
+mdl 1;
+CREATE PAGE MyFirstModule.MxcliProbePage
+FOLDER 'AgentEvaluation'
+(Title: 'Agent evaluation', Layout: Atlas_Core.Atlas_Default)
+{
+  LAYOUTGRID probeGrid {
+    ROW {
+      COLUMN (DesktopWidth: 12) {
+        CONTAINER titleContainer { DYNAMICTEXT probeTitle (Content: 'Created with mxcli') }
+        CONTAINER descriptionContainer { DYNAMICTEXT probeDescription (Content: 'Mendix 10.24.9 page creation compatibility check.') }
+        ACTIONBUTTON closeProbe (Caption: 'Close', Action: CLOSE PAGE)
+      }
+    }
+  }
+};

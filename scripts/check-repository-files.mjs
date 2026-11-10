@@ -4,7 +4,7 @@ import { resolve, relative, join } from "node:path";
 // Inspect only the source/configuration files we intend to publish. Never print
 // secret values. The local token is used only for an exact-match exclusion check.
 const root = resolve(import.meta.dirname, "..");
-const roots = ["src", "scripts", "README.md", "PROJECT_CONTEXT.md", "package.json", "package-lock.json", "tsconfig.json", ".gitignore", ".env.example", "codex-mcp.example.toml"];
+const roots = ["src", "scripts", "evaluation", "README.md", "PROJECT_CONTEXT.md", "package.json", "package-lock.json", "tsconfig.json", ".gitignore", ".env.example", "codex-mcp.example.toml"];
 const files = [];
 async function collect(path) {
   const stat = await lstat(path);

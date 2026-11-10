@@ -68,6 +68,14 @@ An optional proposed enhancement was to require a nonempty, due StartAt inside S
 2. Evaluate existing Mendix tooling before writing every editing operation from scratch.
 3. Add model consistency and meaningful behavioral validation. Local TypeScript/policy checks do not prove a model is valid in Studio Pro or behaves correctly at runtime.
 
+### mxcli evaluation — 2026-11-10
+
+Pinned mxcli v0.31.0 Windows amd64 was downloaded and its release SHA-256 verified. An isolated local copy of ScheduledActionsLab agent-practice (10.24.9.81004) was created under `.local/mxcli-evaluation/ScheduledActionsLab`. The original app checkout remained clean; no Team Server commit was made.
+
+mxcli successfully listed the existing microflows, checked and created a complete Boolean-parameter microflow with an exclusive decision, logging actions and returns, and described it back. The installed Mendix 10.24.9 `mx check` reported zero errors after copying the supporting widget/theme assets into the isolated copy. The initial experiment did not include Studio Pro review or runtime execution; subsequent results are recorded below. See `evaluation/mxcli/README.md` and `branch-probe.mdl` for evidence, limitations and the next checks. Do not treat this narrow result as proof of page support or general compatibility.
+
+Follow-up: user confirmed the probe opened in Studio Pro after transfer to the local agent-practice checkout (commit `99ac64b`; terminal push authentication failed). Subsequent disposable-copy runtime tests on exact Mendix 10.24.9.81004 passed both true/false return assertions and produced both expected log messages. A simple page `MyFirstModule.MxcliProbePage` was created in the disposable copy and included in the successful runtime build. Mendix consistency checks remained at zero errors after test cleanup. Page visual/interaction review is outstanding; no page transfer to agent-practice was made. Test source, page MDL and JUnit evidence are in `evaluation/mxcli/`. User prohibits desktop control; use terminal and connected tools only.
+
 ## Research findings
 
 These are documentation findings, not installation/test results on the practice app:

@@ -1,0 +1,13 @@
+mdl 1;
+/**
+ * @test True branch returns true
+ * @expect $result = true
+ */
+$result = CALL MICROFLOW MyFirstModule.SUB_MxcliBranchProbe(ShouldRun = true);
+/
+/**
+ * @test False branch returns false
+ * @expect $result = false
+ */
+$result = CALL MICROFLOW MyFirstModule.SUB_MxcliBranchProbe(ShouldRun = false);
+/
