@@ -16,6 +16,16 @@ Check the user's authorized task, target app identity, exact Mendix version, dev
 
 If setup is incomplete, guide the user through docs/SETUP.md before attempting model writes. Never claim a tool was installed, connected or tested without a returned result.
 
+## Default to the local app checkout
+
+When a user asks for help inspecting or modifying a Mendix project, use the local app files by default. Discover the existing checkout and identify its MPR, supporting assets, Mendix version, development branch and Git status before asking for information already available locally. The tool repository and app checkout are separate; do not assume this repository contains the app or hardcode a practice-app path.
+
+Use terminal tools and a separately installed, pinned mxcli for local model work. Start with read-only inspection. Before writes, require the target app closed in Studio Pro, preserve existing user work, show the concrete change and validation plan, and validate a new operation on a full disposable copy with the matching Mendix toolset. Apply validated changes to the identified local development checkout within the user's authorization.
+
+Do not choose Team Server writes merely because the online MCP tools are connected or an edit is small. Use online SDK/MCP editing only when the user explicitly requests it or agrees to it after you explain why local editing is unavailable. If local access, a checkout or compatible tools are missing, explain the missing prerequisite and help complete setup rather than silently switching to remote writes. Online read-only inspection may supplement local inspection when relevant; it does not authorize a remote commit.
+
+Keep app changes local for review unless committing or publishing is part of the user's request or existing authorization. Report local edits, local commits and Team Server pushes separately. Do not push to Team Server automatically.
+
 ## Use the correct path
 
 - Existing MCP tools inspect microflows/model units, edit documentation/decisions/scalars and create/delete limited contained elements. They do not create complete pages or connected microflow documents.
