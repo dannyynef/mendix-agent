@@ -6,6 +6,10 @@ Read the user's request, the app's own instructions and relevant repo instructio
 
 Inspect the actual model first: entity attributes, enumeration captions, microflow parameters/calls, page parameters, layouts, widget definitions, security and navigation. Do not apply practice-app names to another app.
 
+## Choose the local workflow by default
+
+For a general request to help with a Mendix project, discover and inspect the existing local app checkout and follow the mxcli workflow below. Keep changes local for review unless committing or publishing is already authorized. If local access or compatible tools are missing, help complete setup; do not silently substitute Team Server writes. Use the SDK/MCP editing workflow only when the user explicitly requests it or agrees to that alternative. See [the local-checkout policy](../AGENTS.md#default-to-the-local-app-checkout).
+
 ## SDK/MCP workflow
 
 1. Discover/list the relevant model objects.
