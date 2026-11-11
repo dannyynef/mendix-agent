@@ -25,6 +25,8 @@ This repository does not contain an AI model or a Mendix application. Your assis
 
 ## Choose an execution path
 
+**Default: work on local app files.** When you give an assistant this repository and ask it to help with a Mendix project, it should discover and inspect your local development checkout, then use terminal/mxcli tools for edits. It should preserve your Mendix version, require the app closed in Studio Pro before file edits, and validate changes on a disposable copy before applying them locally. If local access or tools are missing, it should help complete setup rather than silently edit Team Server. Team Server editing is an explicit alternative; pushing local changes requires your authorization. See [the agent instructions](AGENTS.md#default-to-the-local-app-checkout).
+
 **MCP / online SDK:** configure a Mendix personal access token, app ID and development branch. The server creates temporary online working copies and can commit supported edits to Team Server. No local MPR is required for those tools.
 
 **Terminal / mxcli:** install a pinned mxcli release and work on a local development checkout or disposable copy of your Mendix app. It can create complete microflows, pages and other model elements using MDL. mxcli is separate software; it is not bundled with this repository or exposed by its current MCP server. Studio Pro must have the target app closed during file edits.
@@ -37,6 +39,6 @@ Local SDK policy/MCP tests do not prove that every edited app is valid or works 
 
 ## Share this with another assistant
 
-> Use https://github.com/dannyynef/mendix-agent as the tool repository for my Mendix app. Read AGENTS.md, docs/SETUP.md and docs/CAPABILITIES.md. Check your terminal/MCP access, help me complete setup, and start with read-only inspection. Ask for the app path or app ID, Mendix version and development branch if they are not available. Never ask me to paste a token into chat. Before editing, show the concrete change and validation plan. Do not change my app version or operate my desktop.
+> Use https://github.com/dannyynef/mendix-agent as the tool repository for my Mendix app. Read AGENTS.md, docs/SETUP.md and docs/CAPABILITIES.md. Default to my local app files: discover the existing development checkout, check terminal/mxcli access, help me complete setup, and start with read-only inspection. Ask for the local app path, Mendix version and development branch only if they are not available. Require the app closed in Studio Pro before editing its files. Keep changes local for review; do not switch to Team Server editing or push changes unless I authorize it. Never ask me to paste a token into chat. Before editing, show the concrete change and validation plan. Do not change my app version or operate my desktop.
 
 The repository is currently private. Each person or AI integration needs permission to read/clone it. Sharing its URL does not grant repository or Mendix access.
